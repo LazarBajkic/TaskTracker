@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<div class="ContainerDiv">
+		
+		<img src="">
+		
+		<form th:action="@{/CheckCreds}" method="post">
+		
+			<label for="username">Enter Username</label>
+			<input type="text" id="username" name="username" class="inputField">
+			
+			<label for="password">Enter Password</label>
+			<input type="password" id="password" name="password" class="inputField">
+			
+			<button type="submit">Submit</button>
+		</form>
+		
+	</div>
+
+</body>
+</html>
