@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Task</title>
+</head>
+<body>
+	
+	<div class="outerDiv">
+		
+		<form th:action="@{/SubmitTask}" method="post">
+			<input type="hidden" name="userId" th:value="${userId}" />
+			
+			<label for="subject">Subject</label>
+			<input type="text" id="subject" name="subject" required>
+			
+			<label for="body">Body</label>
+			<textarea id="body" name="body" required></textarea>
+			
+			<button type="submit">Submit</button>
+		</form>
+		
+	</div>
+	
+</body>
+</html>

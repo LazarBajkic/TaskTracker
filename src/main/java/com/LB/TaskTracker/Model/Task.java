@@ -1,37 +1,41 @@
 package com.LB.TaskTracker.Model;
 
-import org.springframework.data.annotation.Id;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Task {
 	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private Integer ID;
+	private Integer id;
+	
 	private String subject;
+	
 	private String body;
-		
+	
+	private Integer userId;
 	
 	public Task() {
 		super();
 	}
 
-	public Task(String subject, String body) {
+	public Task(String subject, String body,Integer userId) {
 		super();
 		this.subject = subject;
 		this.body = body;
+		this.userId = userId;
 	}
 
 	
 	public Integer getID() {
-		return ID;
+		return id;
 	}
-	public void setID(Integer iD) {
-		ID = iD;
+	public void setID(Integer id) {
+		this.id = id;
 	}
 
 	public String getSubject() {
